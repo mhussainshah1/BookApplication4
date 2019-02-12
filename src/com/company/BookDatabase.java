@@ -116,10 +116,11 @@ public class BookDatabase {
     public Book getBook(String SKU){
         for (Book book: books) {
             if(SKU.equalsIgnoreCase(book.getSKU())){
-                return book;
+                this.book = book;
+                break;
             }
         }
-        return null; //ASK MELISSA!!!!
+        return book;
     }
 
     public List<Book> getBooks() {
