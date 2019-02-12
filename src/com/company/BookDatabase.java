@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * BookApplication 3
+ * -----------------
  * A book database class will contain a method to return a book object. We haven't exactly learned how to create a
  * database or read/write to files yet. We're going to use the knowledge we already have to create a class. Our class
  * will simulate a database and return a populated book object. We'll simulate a database by simply using if or switch
@@ -89,6 +91,7 @@ import java.util.List;
  */
 public class BookDatabase {
 
+    Book book;
     List<Book> books;
 
     public BookDatabase() {
@@ -99,6 +102,15 @@ public class BookDatabase {
         books.add(new Book("Python1004","Automate the Boring Stuff with Python","Al Sweigart","Fun with Python",	10.50,true));
         books.add(new Book("Zombie1005","The Maker's Guide to the Zombie Apocalypse","Simon Monk","Defend Your Base with Simple Circuits, Arduino, and Raspberry Pi",16.50,false));
         books.add(new Book("Rasp1006","Raspberry Pi Projects for the Evil Genius","Donald Norris","A dozen fiendishly fun projects for the Raspberry Pi!",	14.75,true));
+    }
+
+    public BookDatabase(String SKU){
+        this();
+        for (Book book: books) {
+            if(SKU.equalsIgnoreCase(book.getSKU())){
+                this.book =book;
+            }
+        }
     }
 
     public Book getBook(String SKU){

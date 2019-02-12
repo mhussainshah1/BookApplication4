@@ -1,25 +1,25 @@
 package com.company;
 
 /**
- * The BookDB class already contains private member variables and a default constructor. It also contains public getters
- * and setters for each private member variable.
+ * BookApplication 1
+ * -----------------
+ * Create a project in IntelliJ called BookApplication.
  *
- * While it is possible to create public member variables and avoid the getters/setters please don't do this. A small
- * puppy will run away from home every time you do this.
+ * Create a Book class that allows for Book title, author, description, price and isInStock variables
  *
- * Next, you'll add an overloaded constructor and a method.
+ * The Book class shall contain private member variables, a default constructor, an overloaded constructor and a method
+ * called getDisplayText() which prints the author, title and description.
  *
- * An overloaded constructor is a constructor that takes one or more parameters. You can create multiple constructors as
- * long as the parameter types and counts are unique. Create a constructor  in the BookDB  class that takes an SKU and
- * populates the private member variables. The constructor by default will return the appropriate BookDB object when it
- * is called. You do not need to include a return statement.
  *
- * Next, create a method in your Book class called getDisplayText(). It takes no parameters. When called it returns a
- * string containing the author, title and description. Do not use System.out.print() in your class. Simply return the
- * string and let the calling class handle the print statements. You can use this method to print your book information
- * to the console or a file or a web page.
+ * The application shall also contain getters and setters for each private member variable.
+ *
+ * Create another class called BookApp which contains the main method. In the main method you shall create an instance
+ * of a Book and print the Author, Title and Description.
+ *
+ * Publish your solution to GitHub and submit your GitHub url as the assignment.
  *
  */
+
 public class Book {
     private String SKU, title, author, description;
     private double price;
@@ -30,7 +30,7 @@ public class Book {
 
     }
 
-    
+
     public Book(String SKU, String title, String author, String description, double price, boolean isInStock) {
         this.SKU = SKU;
         this.title = title;
