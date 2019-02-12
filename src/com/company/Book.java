@@ -24,12 +24,10 @@ public class Book {
     private String SKU, title, author, description;
     private double price;
     private boolean isInStock;
-    private int numberOfCopies;
 
     public Book() {
 
     }
-
 
     public Book(String SKU, String title, String author, String description, double price, boolean isInStock) {
         this.SKU = SKU;
