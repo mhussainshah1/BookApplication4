@@ -89,6 +89,7 @@ import java.util.List;
  * </tfoot>
  * </table>
  */
+
 public class BookDatabase {
 
     private Book book;
@@ -106,11 +107,13 @@ public class BookDatabase {
 
     public BookDatabase(String SKU) {
         this();
-        for (Book book : books) {
-            if (SKU.equalsIgnoreCase(book.getSKU())) {
-                this.book = book;
-            }
-        }
+        book = getBook(SKU);
+
+//        for (Book book : books) {
+//            if (SKU.equalsIgnoreCase(book.getSKU())) {
+//                this.book = book;
+//            }
+//        }
     }
 
     public Book getBook(String SKU) {
